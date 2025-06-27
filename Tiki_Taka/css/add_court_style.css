@@ -1,0 +1,1312 @@
+/* 
+Definition of Comments
+--------------------------------------------
+=> comment Symbol [==] = Start part.
+=> comment Symbol [--]= End part.
+=> comment Symbol [++]= Note.
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(../images/bg.png ) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* ==========  Start Text selection color ======== */
+
+::selection {
+    background-color: #57B55A;
+    color: #000;
+    -webkit-text-fill-color: #000;
+    -webkit-text-stroke: 0.5px;
+}
+
+/* --------- End Text selection color -------- */
+
+/* =============== start scrollbar ============ */
+
+::-webkit-scrollbar {
+    width: 18px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(154, 154, 154, 0.867);
+    border-radius: 90px;
+    margin-block: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #47c34b;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #368a38;
+    border-radius: 30px;
+}
+
+
+/* --------------- End scrollbar------------- */
+
+/* ======================= header start ======================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    padding: 25px 50px;
+    z-index: 6;
+    transition: ease 0.4s;
+}
+
+
+.Photo {
+    width: 50px;
+    height: 47px;
+    padding: 3px 0 0 0;
+    margin-top: 9px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.title a {
+    text-decoration: none;
+    color: #57B55A;
+}
+
+.logo {
+    text-decoration: none;
+    color: #57b55a;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 850;
+    letter-spacing: 1.4px;
+    font-style: italic;
+}
+
+/* ================ start navigation =============== */
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 650;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.navigation {
+    margin: 90px 0;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navigation > li {
+    padding: 15px 30px;
+}
+
+.navigation > li > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navigation .menu {
+    position: relative;
+    margin-right: 25px;
+}
+
+.arrow {
+    color: #57b55a;
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    font-size: 20px;
+    -webkit-text-stroke: 0.3px #ffffff;
+    transition: ease 0.7s;
+}
+
+.navigation .menu:hover .arrow {
+    color: #000;
+    -webkit-text-stroke: 0.3px rgb(0, 0, 0);
+}
+
+.navigation .menu .sub_menu {
+    position: absolute;
+    top: 42px;
+    left: 20px;
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    box-shadow: 0 1px 1px rgba(0, 255, 30, 0.2);
+    font-size: 14px;
+    font-weight: 500;
+    border-top: #57b55a solid 2px;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-in 0.3s 0.2s;
+}
+
+.navigation .menu > a,
+.drop_down_menu .menu > a {
+    cursor: pointer;
+}
+
+.navigation .menu .sub_menu li {
+    padding: 7px;
+}
+
+/* +++++++++++++++++ */
+.game_active {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    padding-left: 9px;
+}
+
+/* +++++++++++++++++ */
+
+.navigation .menu .sub_menu .game_hover {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: ease 0.4s;
+    letter-spacing: 1px;
+}
+
+.navigation .menu .sub_menu .game_hover:hover {
+    color: rgba(255, 255, 255, 1);
+    padding-left: 5px;
+}
+
+.navigation .menu:hover .sub_menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ++++++++++++++ animation box +++++++++++++ */
+
+.navigation .animation {
+    background-color: #57b55a;
+    z-index: -1;
+    position: absolute;
+    top: 4px;
+    left: 115px;
+    height: 85%;
+    width: 120px;
+    border-radius: 12px;
+    margin: 0px 27px;
+    transition: ease-in-out 0.6s;
+}
+
+.navigation li:nth-child(1):hover ~ .animation {
+    width: 100px;
+    left: 0;
+}
+
+.navigation li:nth-child(2):hover ~ .animation {
+    width: 120px;
+    left: 115px;
+
+}
+
+.navigation li:nth-child(3):hover ~ .animation {
+    width: 100px;
+    left: 260px;
+}
+
+.navigation li:nth-child(4):hover ~ .animation {
+    width: 100px;
+    left: 390px;
+}
+
+/*------------- end navigation -------------*/
+
+
+/* +++ Class Added in jQuery file after scroll +++ */
+.navbar_color {
+    background-color: black;
+    width: 100%;
+}
+
+
+
+/* ============== Start toggle ============= */
+
+
+.toggle_btn {
+    width: 28px;
+    height: 18px;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+.toggle_btn span {
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 9px;
+
+}
+
+.toggle_btn span:first-child {
+    top: 0;
+    height: 2.99px;
+}
+
+.toggle_btn span:nth-child(2) {
+    top: 7.39px;
+    height: 3.1px;
+}
+
+.toggle_btn span:last-child {
+    bottom: 0;
+}
+
+.toggle_btn.menu_active:before {
+    content: "";
+    border: solid;
+    border-width: 10px;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    z-index: 1;
+    bottom: -18px;
+    left: 4.5px;
+}
+
+
+
+/* --------------- End toggle --------------- */
+
+
+/* ============== Start Drop Down Menu in Responsive =============*/
+
+.drop_down_menu {
+    display: none;
+    background-color: #000;
+    position: absolute;
+    height: 0;
+    width: 70%;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 57px;
+    z-index: 1;
+    border-radius: 10px;
+    transition: 0.3s height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: fixed;
+}
+
+/* +++ Class Added in javascript file +++ */
+.drop_down_menu.open {
+    height: fit-content;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.drop_down_menu li {
+    list-style: none;
+    margin: 10px;
+    margin-left: 25px;
+}
+
+.drop_down_menu li > a {
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    font-weight: 550;
+    padding: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    line-height: 35px;
+    width: fit-content;
+    transition: 0.5s ease;
+}
+
+.active {
+    background-color: #57B55A;
+}
+
+.drop_down_menu > :first-child {
+    margin: 20px 0;
+}
+
+.drop_down_menu .menu .sub_menu {
+
+    display: none;
+}
+
+.drop_down_menu .menu:hover .sub_menu {
+    display: block;
+}
+
+.drop_down_menu .menu .arrow {
+    color: #57B55A;
+    font-size: 22px;
+    left: 110px;
+    top: 66px;
+    transition: 0.6s ease;
+}
+
+.drop_down_menu .menu .sub_menu a {
+    color: #999;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 30px;
+    line-height: 2px
+}
+
+.drop_down_menu .menu .sub_menu li .game_hover:hover {
+    color: #fff;
+    padding-left: 16px;
+    background-color: #000;
+}
+
+.drop_down_menu .menu .sub_menu li .game_active {
+    color: #fff;
+    padding-left: 16px;
+    background-color: #000;
+}
+
+/* ++++++++++ Animation Background +++++++++ */
+.background_sports {
+    background-color: #57B55A;
+    width: 110px;
+    height: 35px;
+    border-radius: 10px;
+    position: absolute;
+    top: 65px;
+    left: 25px;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.cont li:nth-child(1):hover ~ .background_sports {
+    width: 70px;
+    top: 20px;
+}
+
+.cont li:nth-child(2):hover ~ .background_sports {
+    width: 110px;
+    top: 65px;
+}
+
+.cont li:nth-child(3):hover ~ .background_sports {
+    width: 90px;
+    top: 109px;
+}
+
+.cont li:nth-child(4):hover ~ .background_sports {
+    width: 110px;
+    top: 155px;
+}
+
+.cont li:nth-child(2):hover .arrow {
+    color: #000;
+}
+
+
+/* -------------- End Drop Down Menu in Responsive --------------*/
+
+/*------------------------- header end ------------------------*/
+
+/* ========================= Start Main ========================== */
+
+.title_add {
+    padding: 150px 200px 50px 200px;
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_add h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.7px;
+    width: 500px;
+}
+
+.title_add h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #57B55A;
+}
+
+.title_add p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.main {
+    margin-top: 40px;
+}
+
+.all_inputs {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.all_inputs div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+}
+
+.all_inputs div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.all_inputs div:nth-child(1) .input_1::placeholder {
+    color: rgba(204, 204, 204, 0.904);
+}
+
+.all_inputs div:nth-child(1) .input_1 {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #57B55A;
+    padding: 8px;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.part_1_input {
+    position: relative;
+}
+
+.all_inputs .title_upload {
+    color: rgb(251, 238, 238);
+    font-size: 13px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 81px;
+}
+
+.all_inputs div:nth-child(2) .input_2::placeholder {
+    color: rgba(204, 204, 204, 0.904);
+}
+
+.all_inputs div:nth-child(2) .input_2 {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #57B55A;
+    padding: 8px;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.all_inputs div:nth-child(1) .select select {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #57B55A;
+    margin-bottom: 40px;
+    cursor: pointer;
+    padding: 8px;
+    margin-top: 3px;
+}
+
+.all_inputs div:nth-child(1) .select select option {
+    background-color: #57B55A;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 15px;
+}
+
+.all_inputs div:nth-child(1) .select select option:nth-child(1) {
+    color: #222;
+}
+
+.all_inputs .file_photo {
+    cursor: pointer;
+}
+
+::-webkit-file-upload-button {
+    background-color: #5dc560;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: rgb(0, 0, 0);
+    font-weight: 490;
+}
+
+::-webkit-file-upload-button:hover {
+    background-color: #368a38;
+    color: #000;
+    font-weight: 510;
+}
+
+.all_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.all_buttons .btn {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 800;
+    color: #fff;
+    background-color: #57B55A;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    transition: 0.4s ease;
+}
+
+.all_buttons .btn:hover {
+    background-color: #368a38;
+}
+
+.all_buttons .btn:active {
+    transform: scale(0.85);
+}
+
+.grid_view {
+    min-height: 10vh;
+}
+
+/* ========================= End Main ========================== */
+
+
+/* ============================= Start footer =============================== */
+
+.footer {
+    background-color: #000;
+    border-top: #57B55A solid 3px;
+    color: #fff;
+
+}
+
+.content_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+/* ======== Start footer icons and logo ======== */
+.footer_logo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 16px;
+}
+
+.photo_of_logo {
+    width: 55px;
+    height: 50px;
+    padding: 5px 0 0 0;
+}
+
+.footer_logo a {
+    text-decoration: none;
+    color: #57B55A;
+}
+
+.title_of_logo {
+    text-decoration: none;
+    color: #57b55a;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 880;
+    letter-spacing: 1.4px;
+    font-style: italic;
+
+}
+
+.social_media_icon {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-top: 40px;
+    letter-spacing: 1.5px;
+}
+
+.social_media_icon p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #57B55A;
+    text-transform: uppercase;
+}
+
+.social_media_icon .icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
+}
+
+.social_media_icon .icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    margin-right: 19px;
+    transition: ease 0.2s;
+}
+
+.social_media_icon .icons a:hover {
+    color: rgba(71, 132, 82, 0.8);
+    transform: scale(1.25);
+}
+
+/* --------- End footer icons and logo --------- */
+
+/* ============= Start All pages ============== */
+
+.all_pages p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #57B55A;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    display: flex !important;
+}
+
+.all_pages p span {
+    margin-left: 15px;
+}
+
+.all_pages .pages {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.part_1_pages {
+    display: flex;
+    flex-direction: column;
+}
+
+.part_2_pages {
+    margin-left: 50px;
+}
+
+.all_pages .pages a {
+    text-decoration: none;
+    margin: 3px;
+    color: #CCC;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.all_pages .pages a:hover {
+    color: #9a9a9a;
+}
+
+/* --------------- End All pages ---------------- */
+
+
+/* ============= Start Contact US ========== */
+.contact_us {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.contact-form h2 {
+    color: #57B55A;
+    text-align: left;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+}
+
+.contact-form .text-box {
+    background: #202020;
+    color: #999;
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: #57B55A 1.7px solid;
+    caret-color: #57B55A;
+}
+
+.contact-form .text-box:focus {
+    background-color: #202020;
+    color: rgba(255, 255, 255, 0.838);
+
+}
+
+.contact-form .text-box:first-child {
+    margin-right: 15px;
+}
+
+.contact-form .main-input {
+    background: #202020;
+    color: #999;
+    border: none;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: #57B55A 1.7px solid;
+    outline: none;
+    width: 100%;
+    min-height: 120px;
+    max-height: 120px;
+    padding: 12px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    resize: vertical;
+    caret-color: #57B55A;
+}
+
+.contact-form .main-input:focus {
+    background-color: #202020;
+    color: rgba(255, 255, 255, 0.838);
+}
+
+.contact-form .send-btn {
+    float: right;
+    background: #57B55A;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 300px;
+
+}
+
+.contact-form .send-btn:hover {
+    background-color: #ffffff;
+    color: #57B55A;
+    font-size: 15px;
+    font-weight: 650;
+}
+
+/* -------------- End Contact US--------------- */
+
+/* ========= Start Copyrights part======== */
+
+.copy_right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #222;
+    border-width: 100%;
+
+}
+
+.copy_right p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.copy_right p span a {
+    text-decoration: none;
+    color: #57B55A;
+    transition: 0.2s ease;
+}
+
+.copy_right p span a:hover {
+    color: #CCC;
+}
+
+
+/* ----------- End Copyrights part ----------*/
+
+/* -------------------------------- End footer ----------------------------- */
+
+/* ============ Start Header Media Query ============ */
+
+@media(max-width:991px) {
+    .navigation {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .drop_down_menu {
+        display: block;
+    }
+}
+
+@media(min-width:992px) {
+    .drop_down_menu {
+        display: none;
+    }
+
+}
+
+@media(max-width:840px) {
+    .drop_down_menu {
+        width: 100%;
+        right: 0;
+        border-radius: 0;
+
+    }
+}
+
+@media(max-width:600px) {
+
+
+    .drop_down_menu li > a {
+        font-size: 13px;
+    }
+
+    .drop_down_menu .menu .sub_menu a {
+        font-size: 12px;
+    }
+
+    .drop_down_menu .menu .arrow {
+        font-size: 18px;
+        left: 93px;
+        top: 66px;
+    }
+
+    .Photo {
+        width: 40px;
+        height: 37px;
+        padding: 2px 0 0 0;
+        margin-top: 5px;
+    }
+
+    .logo {
+        font-size: 35px;
+        font-weight: 800;
+        letter-spacing: 1.2
+    }
+
+    .header {
+        padding: 20px 35px;
+        margin-right: 99px;
+        left: 0;
+    }
+
+    .background_sports {
+        width: 95px;
+    }
+
+    .cont li:nth-child(1):hover ~ .background_sports {
+        width: 60px;
+        top: 20px;
+    }
+
+    .cont li:nth-child(2):hover ~ .background_sports {
+        width: 95px;
+        top: 65px;
+    }
+
+    .cont li:nth-child(3):hover ~ .background_sports {
+        width: 80px;
+        top: 109px;
+    }
+
+    .cont li:nth-child(4):hover ~ .background_sports {
+        width: 90px;
+        top: 155px;
+    }
+
+    .book {
+        font-size: 10px;
+        padding: 5px 10px;
+        height: 25px;
+    }
+
+}
+
+@media (max-width: 379px) {
+    .Photo {
+        width: 30px;
+        height: 29px;
+        padding: 2px 0 0 0;
+        margin-top: 6px;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 1;
+    }
+
+    .header {
+        padding: 15px 16px;
+        margin-right: 99px;
+        left: 0;
+    }
+
+    .drop_down_menu li > a {
+        font-size: 10px;
+    }
+
+    .drop_down_menu .menu .sub_menu a {
+        font-size: 9px;
+    }
+
+    .drop_down_menu .menu .arrow {
+
+        font-size: 14px;
+        left: 80px;
+        top: 67px;
+    }
+
+
+    .background_sports {
+        width: 75px;
+    }
+
+    .cont li:nth-child(1):hover ~ .background_sports {
+        width: 50px;
+        top: 20px;
+    }
+
+    .cont li:nth-child(2):hover ~ .background_sports {
+        width: 75px;
+        top: 65px;
+    }
+
+    .cont li:nth-child(3):hover ~ .background_sports {
+        width: 70px;
+        top: 109px;
+    }
+
+    .cont li:nth-child(4):hover ~ .background_sports {
+        width: 70px;
+        top: 155px;
+    }
+}
+
+@media (max-width: 289px) {
+    .Photo {
+        width: 27px;
+        height: 25px;
+        margin-top: 4px;
+
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: 650;
+    }
+
+    .header {
+        padding: 10px 13px;
+    }
+
+    .toggle_btn {
+        width: 24px;
+    }
+
+    .book {
+        font-size: 8px;
+        padding: 4px 8px;
+        height: 20px;
+    }
+}
+
+/* ---------- End Header Media Query --------- */
+
+/* ============ Start Main Media Query ============ */
+
+
+@media(max-width:1023px) {
+    .title_add {
+        padding: 140px 80px 40px 80px;
+    }
+
+    .title_add h1 {
+        font-size: 40px;
+        font-weight: 740;
+        letter-spacing: 1.5px;
+        width: 390px;
+    }
+
+    .title_add p {
+        font-size: 17px;
+        font-weight: 550;
+        margin-top: 8px;
+
+    }
+
+    .main {
+        margin-top: 30px;
+    }
+
+    .all_inputs div:nth-child(1) {
+        max-width: 300px;
+    }
+
+    .all_inputs div:nth-child(2) {
+        width: 300px;
+    }
+
+    .all_inputs div:nth-child(1) .input_1 {
+        font-size: 13px;
+        margin-bottom: 40px;
+    }
+
+    .all_inputs div:nth-child(2) .input_2 {
+        font-size: 13px;
+        margin-bottom: 40px;
+    }
+
+    .all_inputs div:nth-child(1) .select select {
+        margin-top: 0px;
+    }
+
+    .all_inputs div:nth-child(1) .select select option {
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .all_inputs .title_upload {
+        font-size: 12px;
+        font-weight: 300;
+        position: absolute;
+        bottom: 78px;
+    }
+
+    .all_buttons .btn {
+        margin-left: 12px;
+        margin-right: 12px;
+        padding: 9px 17px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+}
+
+@media(max-width:641px) {
+    .title_add {
+        padding: 130px 20px 40px 20px;
+    }
+
+    .title_add h1 {
+        font-size: 23px;
+        font-weight: 650;
+        letter-spacing: 1px;
+        max-width: 220px;
+    }
+
+    .title_add h1 span {
+        -webkit-text-stroke: 1px #57B55A;
+    }
+
+    .title_add p {
+        font-size: 10px;
+        font-weight: 400;
+        margin-top: 7px;
+    }
+
+    .main {
+        margin-top: 20px;
+    }
+
+    .all_inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .all_inputs div:nth-child(1) {
+        max-width: 290px;
+
+    }
+
+    .all_inputs div:nth-child(2) {
+        width: 290px;
+    }
+
+    .all_inputs div:nth-child(1) .input_1 {
+        font-size: 12px;
+        margin-bottom: 36px;
+    }
+
+    .all_inputs div:nth-child(2) .input_2 {
+        font-size: 12px;
+        margin-bottom: 36px;
+    }
+
+    .all_inputs div:nth-child(1) .select select {
+        margin-top: 0px;
+        font-size: 11px;
+    }
+
+    .all_inputs div:nth-child(1) .select select option {
+        padding: 5px;
+        font-size: 11px;
+    }
+
+    .all_inputs .title_upload {
+        font-size: 11px;
+        font-weight: 300;
+        position: absolute;
+        bottom: 70px;
+    }
+
+    .all_buttons {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .all_buttons .btn {
+        margin-left: 7px;
+        margin-right: 7px;
+        padding: 6px 12px;
+        font-size: 11px;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+}
+
+@media(max-width:300px) {
+
+    .title_add {
+        padding: 110px 0px 30px 0px;
+    }
+
+    .title_add h1 {
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        max-width: 170px;
+    }
+
+    .title_add h1 span {
+        -webkit-text-stroke: 0.5px #57B55A;
+    }
+
+    .title_add p {
+        font-size: 8px;
+        font-weight: 400;
+        margin-top: 7px;
+    }
+
+    .main {
+        margin-top: 15px;
+    }
+
+    .all_inputs div:nth-child(1) {
+        max-width: 200px;
+    }
+
+    .all_inputs div:nth-child(2) {
+        width: 200px;
+    }
+
+    .all_inputs div:nth-child(1) .input_1 {
+        font-size: 8px;
+        margin-bottom: 30px;
+    }
+
+    .all_inputs div:nth-child(2) .input_2 {
+        font-size: 8px;
+        margin-bottom: 30px;
+    }
+
+    .all_inputs div:nth-child(1) .select select {
+        margin-top: 0px;
+        font-size: 8px;
+        margin-bottom: 20px;
+    }
+
+    .all_inputs div:nth-child(1) .select select option {
+        padding: 5px;
+        font-size: 8px;
+    }
+
+    .all_inputs .title_upload {
+        font-size: 7px;
+        font-weight: 300;
+        position: absolute;
+        bottom: 63px;
+    }
+
+    .all_buttons {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .all_buttons .btn {
+        margin-left: 3px;
+        margin-right: 3px;
+        padding: 5px 8px;
+        font-size: 8px;
+        font-weight: 450;
+        border-radius: 5px;
+    }
+}

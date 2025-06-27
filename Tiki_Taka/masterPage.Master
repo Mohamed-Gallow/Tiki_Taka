@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="Tiki_Taka.masterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font-Awesome library  -->
+    <link rel="stylesheet" href="libraries/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!-- AOS library -->
+    <link rel="stylesheet" href="libraries/aos-master/dist/aos.css">
+
+    <asp:ContentPlaceHolder ID="Css_Link" runat="server"></asp:ContentPlaceHolder>
+    
+    <asp:ContentPlaceHolder ID="Title" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <asp:ContentPlaceHolder ID="header_place" runat="server"></asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="Body_place" runat="server"></asp:ContentPlaceHolder>
+
+
+        
+      <asp:ContentPlaceHolder ID="Other_Services" runat="server"></asp:ContentPlaceHolder>
+
+
+
+
+        <footer class="footer">
+        <div class="content_footer">
+            <div>
+                <div class="footer_logo">
+                    <a href="defult.aspx"><img class="photo_of_logo" src="images/logo.png"></a>
+                    <a href="defult.aspx" class="title_of_logo"><span style="color:#fff ;">TiKi</span> Taka</a>
+                </div>
+                <div class="social_media_icon">
+                    <p>FOLLOW US ON:</p>
+                    <div class="icons">
+                        <a href="https://www.instagram.com" title="Instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com" title="Facebook" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com" title="Youtube" target="_blank">
+                            <i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.twitter.com" title="Twitter" target="_blank">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" title="Linkedin" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.tiktok.com" title="Tiktok" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://www.whatsapp.com" title="Whatsapp" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="all_pages">
+                <p>All <span>Pages</span></p>
+                <div class="pages">
+                    <div class="part_1_pages">
+                        <a href="defult.aspx">Home</a>
+                        <a href="soccer.aspx">Soccer</a>
+                        <a href="Basket.aspx">Basketball</a>
+                        <a href="tennis.aspx">Tennis</a>
+                    </div>
+                    <div class="part_1_pages part_2_pages">
+                        <a href="Swimming.aspx">Swimming</a>
+                        <a href="add.aspx">Add Court</a>
+                        <a href="join_us.aspx">Join Us</a>
+                        <a href="About_Us.aspx">About Us</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="contact_us">
+                <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <div class="contact" action="" method="post">
+                        <asp:TextBox ID="Name" runat="server" class="text-box" placeholder="Your Name" autocomplete="off"></asp:TextBox>
+                        
+                       
+                        
+                        <asp:TextBox ID="your_email" runat="server" class="text-box" placeholder="Your Email" TextMode="Email" autocomplete="off"></asp:TextBox>
+                        
+                       
+                        <asp:TextBox ID="message" runat="server" class="main-input" placeholder="Your Message" TextMode="MultiLine" autocomplete="off"></asp:TextBox>
+                        
+                        
+                        
+                        <asp:Button ID="Button1" runat="server" class="send-btn" Text="Send" OnClick="Button1_Click" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copy_right">
+            <p>Copyrights © 2023 All Rights Reserved by <span><a href="home.html">Tiki Taka Inc.</a></span></p>
+        </div>
+
+    </footer>
+
+    <!-- ==== Angel Up Arrow ==== -->
+    <div class="angel_up">
+        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+
+    <script src="libraries/jquery-3.6.4.js"></script><!-- jQuery library -->
+    <script src="jquery/jQuery.js"></script>
+    <script src="libraries/aos-master/dist/aos.js"></script> <!-- AOS library -->
+
+    <script type="text/javascript" src="javaScript/main.js"></script>
+    </form>
+</body>
+</html>

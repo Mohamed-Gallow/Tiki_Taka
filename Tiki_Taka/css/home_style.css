@@ -1,0 +1,2655 @@
+/* 
+Definition of Comments
+--------------------------------------------
+=> comment Symbol [==] = Start part.
+=> comment Symbol [--]= End part.
+=> comment Symbol [++]= Note.
+
+*/
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* ==========  Start Text selection color ======== */
+
+::selection {
+    background-color: #57B55A;
+    color: #000;
+    -webkit-text-fill-color: #000;
+    -webkit-text-stroke: 0.5px;
+}
+
+/* --------- End Text selection color -------- */
+
+/* =============== start scrollbar ============ */
+
+::-webkit-scrollbar {
+    width: 18px;
+    /* 18  */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(154, 154, 154, 0.867);
+    border-radius: 90px;
+    margin-block: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #47c34b;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #368a38;
+    border-radius: 30px;
+}
+
+
+/* --------------- End scrollbar------------- */
+
+/* ======================= header start ======================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    padding: 25px 50px;
+    z-index: 6;
+    transition: ease 0.4s;
+}
+
+
+.Photo {
+    width: 50px;
+    height: 47px;
+    padding: 3px 0 0 0;
+
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title a {
+    text-decoration: none;
+    color: #57B55A;
+}
+
+.logo {
+    text-decoration: none;
+    color: #57b55a;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 850;
+    letter-spacing: 1.4px;
+    font-style: italic;
+}
+
+/* ================ start navigation =============== */
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 650;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.navigation {
+    margin: 90px 0;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navigation > li {
+    padding: 15px 30px;
+}
+
+.navigation > li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navigation .menu {
+    position: relative;
+    margin-right: 25px;
+}
+
+.arrow {
+    color: #57b55a;
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    font-size: 20px;
+    -webkit-text-stroke: 0.3px #ffffff;
+    transition: ease 0.7s;
+}
+
+.navigation .menu:hover .arrow {
+    color: #000;
+    -webkit-text-stroke: 0.3px rgb(0, 0, 0);
+}
+
+.navigation .menu .sub_menu {
+    position: absolute;
+    top: 42px;
+    left: 20px;
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    box-shadow: 0 1px 1px rgba(0, 255, 30, 0.2);
+    font-size: 14px;
+    font-weight: 500;
+    border-top: #57b55a solid 2px;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease-in 0.3s 0.2s;
+}
+
+.navigation .menu > a,
+.drop_down_menu .menu > a {
+    cursor: pointer;
+}
+
+.navigation .menu .sub_menu li {
+    padding: 7px;
+}
+
+.navigation .menu .sub_menu li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: ease 0.4s;
+    letter-spacing: 1px;
+}
+
+.navigation .menu .sub_menu li a:hover {
+    color: rgba(255, 255, 255, 1);
+    padding-left: 5px;
+}
+
+
+.navigation .menu:hover .sub_menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ++++++++++++++ animation box +++++++++++++ */
+
+.navigation .animation {
+    background-color: #57b55a;
+    z-index: -1;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 85%;
+    width: 100px;
+    border-radius: 12px;
+    margin: 0px 27px;
+    transition: ease-in-out 0.6s;
+}
+
+.navigation li:nth-child(1):hover ~ .animation {
+    width: 100px;
+    left: 0;
+}
+
+.navigation li:nth-child(2):hover ~ .animation {
+    width: 120px;
+    left: 115px;
+}
+
+.navigation li:nth-child(3):hover ~ .animation {
+    width: 100px;
+    left: 260px;
+}
+
+.navigation li:nth-child(4):hover ~ .animation {
+    width: 100px;
+    left: 390px;
+}
+
+/*------------- end navigation -------------*/
+
+
+/* +++ Class Added in jQuery file after scroll +++ */
+.navbar_color {
+    background-color: black;
+    width: 100%;
+}
+
+
+
+/* ============== Start toggle ============= */
+
+
+.toggle_btn {
+    width: 28px;
+    height: 18px;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+
+.toggle_btn span {
+    background-color: rgb(255, 255, 255);
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 9px;
+
+}
+
+.toggle_btn span:first-child {
+    top: 0;
+    height: 2.99px;
+}
+
+.toggle_btn span:nth-child(2) {
+    top: 7.39px;
+    height: 3.1px;
+}
+
+.toggle_btn span:last-child {
+    bottom: 0;
+}
+
+.toggle_btn.menu_active:before {
+    content: "";
+    border: solid;
+    border-width: 10px;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    z-index: 1;
+    bottom: -18px;
+    left: 4.5px;
+
+}
+
+/* --------------- End toggle --------------- */
+
+
+/* ============== Start Drop Down Menu in Responsive =============*/
+
+.drop_down_menu {
+    display: none;
+    background-color: #000;
+    position: absolute;
+    height: 0;
+    width: 70%;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 57px;
+    z-index: 1;
+    border-radius: 10px;
+    transition: 0.3s height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    position: fixed;
+}
+
+/* +++ Class Added in javascript file +++ */
+.drop_down_menu.open {
+    height: fit-content;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.drop_down_menu li {
+    list-style: none;
+    margin: 10px;
+    margin-left: 25px;
+}
+
+.drop_down_menu li > a {
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    font-weight: 550;
+    padding: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    line-height: 35px;
+    width: fit-content;
+    transition: 0.5s ease;
+}
+
+.drop_down_menu > :first-child {
+    margin: 20px 0;
+}
+
+.drop_down_menu .menu .sub_menu {
+
+    display: none;
+}
+
+.drop_down_menu .menu:hover .sub_menu {
+    display: block;
+}
+
+.drop_down_menu .menu .arrow {
+    color: #57B55A;
+    font-size: 22px;
+    left: 110px;
+    top: 66px;
+    transition: 0.6s ease;
+}
+
+.drop_down_menu .menu .sub_menu a {
+    color: #999;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 30px;
+    line-height: 2px
+}
+
+.drop_down_menu .menu .sub_menu a:hover {
+    color: #fff;
+    padding-left: 16px;
+    background-color: #000;
+}
+
+/* ++++++++++ Animation Background +++++++++ */
+.background_sports {
+    background-color: #57B55A;
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.cont li:nth-child(1):hover ~ .background_sports {
+    width: 70px;
+    top: 20px;
+}
+
+.cont li:nth-child(2):hover ~ .background_sports {
+    width: 110px;
+    top: 65px;
+}
+
+.cont li:nth-child(3):hover ~ .background_sports {
+    width: 90px;
+    top: 109px;
+}
+
+.cont li:nth-child(4):hover ~ .background_sports {
+    width: 110px;
+    top: 155px;
+}
+
+.cont li:nth-child(2):hover .arrow {
+    color: #000;
+}
+
+/* -------------- End Drop Down Menu in Responsive --------------*/
+
+
+/*------------------------- header end ------------------------*/
+
+/* ===================== start main ======================== */
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* ++++++++ value of opacity +++++++++ */
+    padding: 100px 150px;
+    position: relative;
+}
+
+.video-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+@media(max-width:800px) {
+    .video-background {
+        min-height: 600px;
+    }
+}
+
+.image_stadiums {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+}
+
+.image_stadiums img {
+    width: 555px;
+    height: 566px;
+    filter: brightness(0.9);
+}
+
+.main div h2 {
+    color: #ffffff;
+    font-size: 66px;
+    font-weight: 700;
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-top: 50px;
+}
+
+.main div h2 .h2 {
+    color: #57b55a;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 0;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #57b55a;
+
+    animation: title_animation 1s linear;
+}
+
+@keyframes title_animation {
+    from {
+        display: none;
+        opacity: 0;
+    }
+
+    to {
+        display: block;
+        padding: 0;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 3px #57b55a;
+    }
+}
+
+.title-h2 {
+    position: absolute;
+    top: 168px;
+}
+
+.main div h3 {
+    width: 550px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-right: 10px;
+}
+
+/*------------------------- end  main  -------------------*/
+
+/* =================== start section Two ==================== */
+
+.section_games {
+    width: 100%;
+    height: 1900px;
+    background: rgb(0, 0, 0, 0.6);
+    border-top: #57b55a solid 2px;
+    padding: 80px 200px;
+}
+
+.join_tiki_taka {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.join_tiki_taka .join {
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: 1px;
+}
+
+.join_tiki_taka .join span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #57b55a;
+}
+
+.join_tiki_taka .text {
+    line-height: 1.6;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.join_tiki_taka hr {
+    width: 40px;
+    margin-top: 40px;
+    color: rgb(100, 100, 100);
+}
+
+.box {
+    width: 100%;
+    position: absolute;
+    margin-top: 670px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    background-color: green;
+    height: 500px;
+    z-index: 0;
+    opacity: 0.2;
+    transform: skewY(-11deg);
+}
+
+/* ++++++++++++++++++ football +++++++++++++++++++++*/
+
+.section_games .football {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.img_football {
+    width: 620px;
+    height: 620px;
+    position: absolute;
+    left: 0;
+    top: 850px;
+}
+
+.section_games .football .text_football {
+    position: absolute;
+    right: 50px;
+    top: 1090px;
+    color: #fff;
+}
+
+.text_football .title_football {
+    font-size: 40px;
+    font-weight: 850;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+.text_football .title_football span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #57b55a;
+}
+
+.section_games .text_football .text_title_football {
+    width: 500px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* +++++++++++++ tennis ++++++++++++++ */
+
+.section_games .tennis {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    margin: 0;
+    padding: 0;
+}
+
+.img_tennis {
+    width: 660px;
+    height: 660px;
+    position: absolute;
+    right: 0;
+    top: 1370px;
+}
+
+.section_games .tennis .text_tennis {
+    position: absolute;
+    left: 35px;
+    top: 1600px;
+    color: #fff;
+}
+
+.text_tennis .title_tennis {
+    font-size: 40px;
+    font-weight: 850;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    width: 300px;
+}
+
+.text_tennis .title_tennis span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #57b55a;
+}
+
+.section_games .text_tennis .text_title_tennis {
+    width: 590px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* +++++++++++++++ basket ++++++++++++++++++ */
+
+.section_games .basket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.img_basket {
+    width: 660px;
+    height: 660px;
+    position: absolute;
+    left: 0;
+    top: 1950px;
+}
+
+.section_games .basket .text_basket {
+    position: absolute;
+    right: 35px;
+    top: 2150px;
+    color: #fff;
+}
+
+.text_basket .title_basket {
+    font-size: 40px;
+    font-weight: 850;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    width: 500px;
+}
+
+.text_basket .title_basket span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #57b55a;
+}
+
+.section_games .text_basket .text_title_basket {
+    width: 600px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/*------------------------ End section Two ---------------------*/
+
+/* ================== start section another Sports =================== */
+
+.sports {
+    background: none;
+    background-color: rgb(3, 16, 3);
+    border-top: #57b55a solid 1px;
+    padding: 100px 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.sports .title {
+    display: flex;
+    justify-content: center;
+    color: #57b55a;
+    font-size: 45px;
+    font-weight: 750;
+    margin-bottom: 35px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    padding-bottom: 33px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: #57b55a 2px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid white;
+    min-height: 225;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.sport_image img {
+    width: 100%;
+}
+
+.card:hover .sport_image {
+    filter: brightness(1.3);
+}
+
+.card:hover .tennis_image {
+    filter: brightness(0.85);
+}
+
+.info {
+    padding: 16px;
+}
+
+.sport_category {
+    font-size: 13px;
+    color: black;
+}
+
+.sport_title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/*+++++ Button from library CSSFX ++++++ */
+
+.sport_title span {
+    margin-top: 9px;
+    /*+++++++*/
+}
+
+.go_button {
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    padding: 0.5em 1em;
+    outline: none;
+    border: none;
+    background-color: hsl(0, 0%, 0%);
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+.go_button::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #57b55a;
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.go_button:hover {
+    cursor: pointer;
+    color: #161616;
+}
+
+.go_button:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+/* ======== Start Edit AOS Library to transform scale =========*/
+
+
+[data-aos=fade-up-edit] {
+    transform: translate3d(0, 100px, 0);
+}
+
+[data-aos=fade-up-edit].aos-animate:hover {
+    transform: scale(1.1);
+}
+
+[data-aos=fade-up-right-edit] {
+    transform: translate3d(-100px, 100px, 0);
+}
+
+[data-aos=fade-up-right-edit].aos-animate:hover {
+    transform: scale(1.1);
+}
+
+[data-aos=fade-up-left-edit] {
+    transform: translate3d(100px, 100px, 0);
+}
+
+[data-aos=fade-up-left-edit].aos-animate:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* -------- End Edit AOS Library to transform scale -------- */
+
+/* ------------- End section another Sports ----------- */
+
+
+/* ============================= Start footer =============================== */
+
+.footer {
+    background-color: #000;
+    border-top: #57B55A solid 3px;
+    color: #fff;
+
+}
+
+.content_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+
+/* ======== Start footer icons and logo ======== */
+.footer_logo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 16px;
+}
+
+.photo_of_logo {
+    width: 55px;
+    height: 50px;
+    padding: 5px 0 0 0;
+}
+
+.footer_logo a {
+    text-decoration: none;
+    color: #57B55A;
+}
+
+.title_of_logo {
+    text-decoration: none;
+    color: #57b55a;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 880;
+    letter-spacing: 1.4px;
+    font-style: italic;
+
+}
+
+.social_media_icon {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-top: 40px;
+    letter-spacing: 1.5px;
+}
+
+.social_media_icon p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #57B55A;
+    text-transform: uppercase;
+}
+
+.social_media_icon .icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
+}
+
+.social_media_icon .icons a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    margin-right: 19px;
+    transition: ease 0.2s;
+}
+
+.social_media_icon .icons a:hover {
+    color: rgba(71, 132, 82, 0.8);
+    transform: scale(1.25);
+}
+
+/* --------- End footer icons and logo --------- */
+
+/* ============= Start All pages ============== */
+
+.all_pages p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #57B55A;
+    text-transform: uppercase;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+    display: flex !important;
+}
+
+.all_pages p span {
+    margin-left: 15px;
+}
+
+.all_pages .pages {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.part_1_pages {
+    display: flex;
+    flex-direction: column;
+}
+
+.part_2_pages {
+    margin-left: 50px;
+}
+
+.all_pages .pages a {
+    text-decoration: none;
+    margin: 3px;
+    color: #CCC;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.all_pages .pages a:hover {
+    color: #9a9a9a;
+}
+
+/* --------------- End All pages ---------------- */
+
+
+/* ============= Start Contact US ========== */
+.contact_us {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.contact-form h2 {
+    color: #57B55A;
+    text-align: left;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+}
+
+.contact-form .text-box {
+    background: #202020;
+    color: #999;
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: #57B55A 1.7px solid;
+    caret-color: #57B55A;
+
+}
+
+.contact-form .text-box:focus {
+    background-color: #202020;
+    color: rgba(255, 255, 255, 0.838);
+}
+
+.contact-form .text-box:first-child {
+    margin-right: 15px;
+}
+
+.contact-form .main-input {
+    background: #202020;
+    color: #999;
+    border: none;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: #57B55A 1.7px solid;
+    outline: none;
+    width: 100%;
+    min-height: 120px;
+    max-height: 120px;
+    padding: 12px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    resize: vertical;
+    caret-color: #57B55A;
+}
+
+.contact-form .main-input:focus {
+    background-color: #202020;
+    color: rgba(255, 255, 255, 0.838);
+}
+
+.contact-form .send-btn {
+    float: right;
+    background: #57B55A;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 300px;
+
+}
+
+.contact-form .send-btn:hover {
+    background-color: #ffffff;
+    color: #57B55A;
+    font-weight: 650;
+}
+
+.contact-form .send-btn:active{
+    transform: scale(0.9);
+}
+
+/* -------------- End Contact US--------------- */
+
+/* ========= Start Copyrights part======== */
+
+.copy_right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #222;
+    border-width: 100%;
+
+}
+
+.copy_right p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.copy_right p span a {
+    text-decoration: none;
+    color: #57B55A;
+    transition: 0.2s ease;
+}
+
+.copy_right p span a:hover {
+    color: #CCC;
+}
+
+
+/* ----------- End Copyrights part ----------*/
+
+/* -------------------------------- End footer ----------------------------- */
+
+
+/* ==================== Start Angel Up Arrow =================== */
+
+.angel_up {
+    /* text-decoration: none; */
+    position: fixed;
+    bottom: 10px;
+    right: -45px;
+    background-color: #57b55a;
+    color: #fff;
+    font-size: 30px;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: ease 0.5s;
+    border-radius: 10px;
+
+}
+
+.angel_up a i {
+    color: #fff;
+    /* change color */
+    opacity: 0.9;
+}
+
+.angel_up:hover {
+    background-color: #318232;
+    opacity: 1;
+}
+
+.angel_up.show {
+    right: 10px;
+    cursor: pointer;
+}
+
+/* --------------------- End Angel Up Arrow--------------------- */
+
+/* ============ Start Header Media Query ============ */
+
+@media(max-width:991px) {
+    .navigation {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .drop_down_menu {
+        display: block;
+    }
+}
+
+@media(min-width:992px) {
+    .drop_down_menu {
+        display: none;
+    }
+}
+
+@media(max-width:840px) {
+    .drop_down_menu {
+        width: 100%;
+        right: 0;
+        border-radius: 0;
+    }
+}
+
+@media(max-width:600px) {
+    .drop_down_menu li > a {
+        font-size: 13px;
+    }
+
+    .drop_down_menu .menu .sub_menu a {
+        font-size: 12px;
+    }
+
+    .drop_down_menu .menu .arrow {
+        font-size: 18px;
+        left: 93px;
+        top: 66px;
+    }
+
+    .Photo {
+        width: 40px;
+        height: 37px;
+        padding: 2px 0 0 0;
+        margin-top: 5px;
+    }
+
+    .logo {
+        font-size: 35px;
+        font-weight: 800;
+        letter-spacing: 1.2
+    }
+
+    .header {
+        padding: 20px 35px;
+        margin-right: 99px;
+        left: 0;
+    }
+
+    .background_sports {
+        width: 95px;
+    }
+
+    .cont li:nth-child(1):hover ~ .background_sports {
+        width: 60px;
+        top: 20px;
+    }
+
+    .cont li:nth-child(2):hover ~ .background_sports {
+        width: 95px;
+        top: 65px;
+    }
+
+    .cont li:nth-child(3):hover ~ .background_sports {
+        width: 80px;
+        top: 109px;
+    }
+
+    .cont li:nth-child(4):hover ~ .background_sports {
+        width: 90px;
+        top: 155px;
+    }
+
+}
+
+@media (max-width: 379px) {
+    .Photo {
+        width: 30px;
+        height: 29px;
+        padding: 2px 0 0 0;
+        margin-top: 6px;
+    }
+
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 1;
+    }
+
+    .header {
+        padding: 15px 16px;
+        margin-right: 99px;
+        left: 0;
+    }
+
+    .drop_down_menu li > a {
+        font-size: 10px;
+    }
+
+    .drop_down_menu .menu .sub_menu a {
+        font-size: 9px;
+    }
+
+    .drop_down_menu .menu .arrow {
+        font-size: 14px;
+        left: 80px;
+        top: 67px;
+    }
+
+    .background_sports {
+        width: 50px;
+    }
+
+    .cont li:nth-child(1):hover ~ .background_sports {
+        width: 50px;
+        top: 20px;
+    }
+
+    .cont li:nth-child(2):hover ~ .background_sports {
+        width: 75px;
+        top: 65px;
+    }
+
+    .cont li:nth-child(3):hover ~ .background_sports {
+        width: 70px;
+        top: 109px;
+    }
+
+    .cont li:nth-child(4):hover ~ .background_sports {
+        width: 70px;
+        top: 155px;
+    }
+}
+
+@media (max-width: 289px) {
+    .Photo {
+        width: 27px;
+        height: 25px;
+        margin-top: 4px;
+
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: 650;
+    }
+
+    .header {
+        padding: 10px 13px;
+    }
+
+    .toggle_btn {
+        width: 24px;
+    }
+}
+
+/* ---------- End Header Media Query --------- */
+
+/* ============ Start Main Media Query ============ */
+
+
+@media (max-width: 1236px) {
+    .main {
+        padding: 100px 80px;
+    }
+
+    .image_stadiums {
+        right: 20px;
+    }
+
+    .image_stadiums img {
+        width: 530px;
+        height: 530px;
+    }
+
+    .section_games {
+        padding: 80px 180px;
+    }
+}
+
+@media (max-width: 1144px) {
+    .main {
+        padding: 100px 50px;
+        height: 110vh;
+    }
+
+    .image_stadiums {
+        right: 10px;
+        top: 65px
+    }
+
+    .image_stadiums img {
+        width: 430px;
+        height: 430px;
+    }
+
+    .section_games {
+        padding: 80px 140px;
+    }
+
+    .section_games .football .text_football {
+        right: 40px;
+        top: 1100px;
+    }
+
+    .img_football {
+        width: 480px;
+        height: 480px;
+        top: 970px;
+    }
+
+    .text_football .title_football {
+        font-size: 30px;
+        font-weight: 800;
+        
+    }
+
+    .section_games .text_football .text_title_football {
+        width: 400px;
+        font-weight: 300;
+    }
+
+    .section_games .tennis .text_tennis {
+        left: 35px;
+        top: 1500px;
+    }
+
+    .text_tennis .title_tennis {
+        font-size: 30px;
+        font-weight: 800;
+        width: 300px;
+    }
+
+    .section_games .text_tennis .text_title_tennis {
+        width: 420px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .section_games .basket .text_basket {
+        top: 1950px;
+        right: 20px;
+    }
+
+    .img_tennis {
+        width: 560px;
+        height: 560px;
+        top: 1330px;
+        padding-left: 120px;
+    }
+
+
+    .img_basket {
+        width: 530px;
+        height: 530px;
+        top: 1800px;
+        left: -50px;
+    }
+
+    .text_basket .title_basket {
+        font-size: 30px;
+        font-weight: 800;
+        width: 350px;
+    }
+
+    .section_games .text_basket .text_title_basket {
+        width: 420px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .section_games {
+        height: 1700px;
+    }
+
+}
+
+@media(max-width:991px) {
+    .image_stadiums {
+        display: none;
+    }
+
+    .main {
+        padding: 100px 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        padding: 100px 150px;
+        height: 100vh;
+    }
+
+    .section_games {
+        padding: 80px 140px;
+    }
+
+    .section_games .football .text_football {
+        top: 1430px;
+        z-index: 1;
+        left: 120px;
+    }
+
+    .img_football {
+        width: 580px;
+        height: 580px;
+        left: 18%;
+        top: 980px;
+    }
+
+    .text_football .title_football {
+        font-size: 35px;
+        font-weight: 850;
+    }
+
+    .section_games .text_football .text_title_football {
+        font-weight: 300;
+        font-size: 18px;
+        width: 650px;
+    }
+
+    .img_tennis {
+        top: 1570px;
+        left: 15%;
+        width: 690px;
+        height: 690px;
+        padding-left: 0px;
+    }
+
+    .section_games .tennis .text_tennis {
+        top: 2100px;
+        left: 120px;
+    }
+
+    .text_tennis .title_tennis {
+        font-size: 35px;
+        font-weight: 850;
+    }
+
+    .section_games .text_tennis .text_title_tennis {
+        font-weight: 300;
+        font-size: 17px;
+        width: 660px;
+    }
+
+    .section_games .basket .text_basket {
+        top: 2850px;
+        left: 120px;
+    }
+
+    .img_basket {
+        top: 2250px;
+        left: 15%;
+        width: 690px;
+        height: 690px;
+    }
+
+    .text_basket .title_basket {
+        font-size: 35px;
+        font-weight: 850;
+        width: 370px;
+    }
+
+    .section_games .text_basket .text_title_basket {
+        width: 650px;
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    .section_games {
+        height: 2500px;
+    }
+
+}
+
+
+@media (max-width: 818px) {
+    .main {
+        padding: 100px 80px 100px 140px;
+    }
+
+    .section_games {
+        padding: 80px 0px;
+    }
+
+    .join_tiki_taka .join {
+        font-size: 24px;
+    }
+
+    .join_tiki_taka .text {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .join_tiki_taka hr {
+        margin-top: 20px;
+    }
+
+    .section_games .football .text_football {
+        top: 1300px;
+        z-index: 1;
+        left: 60px;
+    }
+
+    .img_football {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        top: 820px;
+    }
+
+    .text_football .title_football {
+        font-size: 28px;
+        font-weight: 800;
+    }
+
+    .section_games .text_football .text_title_football {
+        font-weight: 300;
+        font-size: 15px;
+        width: 600px;
+    }
+
+    .img_tennis {
+        padding: 0;
+        top: 1480px;
+        margin: 0 auto;
+        left: 0;
+        width: 600px;
+        height: 600px;
+    }
+
+    .section_games .tennis .text_tennis {
+        top: 2000px;
+        left: 60px;
+    }
+
+    .text_tennis .title_tennis {
+        font-size: 28px;
+        font-weight: 800;
+    }
+
+    .section_games .text_tennis .text_title_tennis {
+        font-weight: 300;
+        font-size: 15px;
+        width: 600px;
+    }
+
+    .section_games .basket .text_basket {
+        top: 2700px;
+        left: 60px;
+    }
+
+    .img_basket {
+        top: 2180px;
+        margin: 0 auto;
+        width: 560px;
+        height: 560px;
+    }
+
+    .text_basket .title_basket {
+        font-size: 28px;
+        font-weight: 800;
+        width: 300px;
+    }
+
+    .section_games .text_basket .text_title_basket {
+        width: 600px;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .section_games {
+        height: 2350px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+    .main {
+        padding: 100px 80px;
+    }
+
+    .main .title-h2 {
+        font-size: 50px;
+        margin-top: 30px;
+    }
+
+    .main div h2 .h2 {
+        font-size: 50px;
+    }
+
+    .main div h3 {
+        font-size: 16px;
+        max-width: 500px;
+    }
+
+    .section_games {
+        padding: 50px 0px;
+    }
+
+    .join_tiki_taka .join {
+        font-size: 23px;
+    }
+
+    .join_tiki_taka .text {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    .join_tiki_taka hr {
+        margin-top: 20px;
+        width: 30px;
+    }
+
+    .section_games .football .text_football {
+        top: 1180px;
+        z-index: 1;
+        left: 60px;
+    }
+
+    .img_football {
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+        top: 800px;
+    }
+
+    .text_football .title_football {
+        font-size: 25px;
+        font-weight: 750;
+    }
+
+    .section_games .text_football .text_title_football {
+        font-weight: 300;
+        font-size: 13px;
+        max-width: 500px;
+    }
+
+    .img_tennis {
+        padding: 0;
+        top: 1350px;
+        margin: 0 auto;
+        width: 500px;
+        height: 500px;
+    }
+
+    .section_games .tennis .text_tennis {
+        top: 1800px;
+        left: 60px;
+    }
+
+    .text_tennis .title_tennis {
+        font-size: 25px;
+        font-weight: 750;
+    }
+
+    .section_games .text_tennis .text_title_tennis {
+        font-weight: 300;
+        font-size: 13px;
+        max-width: 510px;
+    }
+
+    .section_games .basket .text_basket {
+        top: 2400px;
+        left: 60px;
+    }
+
+    .img_basket {
+        top: 1980px;
+        margin: 0 auto;
+        width: 460px;
+        height: 460px;
+    }
+
+    .text_basket .title_basket {
+        font-size: 25px;
+        font-weight: 750;
+        width: 300px;
+    }
+
+    .section_games .text_basket .text_title_basket {
+        max-width: 500px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    .section_games {
+        height: 2050px;
+    }
+
+}
+
+
+@media (max-width: 589px) {
+    .main {
+        padding: 100px 50px;
+    }
+
+    .main .title-h2 {
+        font-size: 48px;
+    }
+
+    .main div h2 .h2 {
+        font-size: 48px;
+    }
+
+    .main div h3 {
+        font-size: 15px;
+        max-width: 450px;
+    }
+
+    .section_games {
+        padding: 50px 0px;
+    }
+
+    .join_tiki_taka .join {
+        font-size: 22px;
+    }
+
+    .join_tiki_taka .text {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .join_tiki_taka hr {
+        margin-top: 20px;
+        width: 28px;
+    }
+
+    .section_games .football .text_football {
+        top: 1130px;
+        z-index: 1;
+        left: 40px;
+    }
+
+    .img_football {
+        width: 340px;
+        height: 340px;
+        margin: 0 auto;
+        top: 820px;
+    }
+
+    .text_football .title_football {
+        font-size: 23px;
+        font-weight: 730;
+    }
+
+    .section_games .text_football .text_title_football {
+        font-weight: 300;
+        font-size: 12px;
+        max-width: 430px;
+    }
+
+    .img_tennis {
+        padding: 0;
+        top: 1280px;
+        margin: 0 auto;
+        width: 410px;
+        height: 410px;
+    }
+
+    .section_games .tennis .text_tennis {
+        top: 1650px;
+        left: 40px;
+    }
+
+    .text_tennis .title_tennis {
+        font-size: 23px;
+        font-weight: 730;
+    }
+
+    .section_games .text_tennis .text_title_tennis {
+        font-weight: 300;
+        font-size: 12px;
+        max-width: 440px;
+    }
+
+    .section_games .basket .text_basket {
+        top: 2100px;
+        left: 40px;
+    }
+
+    .img_basket {
+        top: 1800px;
+        margin: 0 0 0 20px;
+        width: 340px;
+        height: 340px;
+    }
+
+    .text_basket .title_basket {
+        font-size: 23px;
+        font-weight: 720;
+    }
+
+    .section_games .text_basket .text_title_basket {
+        max-width: 430px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    .section_games {
+        height: 1750px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .main {
+        padding: 100px 30px;
+    }
+
+    .main .title-h2 {
+        font-size: 43px;
+        margin-top: 40px;
+    }
+
+    .main div h2 .h2 {
+        font-size: 43px;
+        -webkit-text-stroke: 2px #57b55a;
+    }
+
+    .main div h3 {
+        font-size: 15px;
+        max-width: 360px;
+    }
+
+    .section_games {
+        padding: 50px 0px;
+    }
+
+    .join_tiki_taka .join {
+        font-size: 20px;
+    }
+
+    .join_tiki_taka .text {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .section_games .football .text_football {
+        top: 1040px;
+        z-index: 1;
+        left: 40px;
+    }
+
+    .img_football {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+        top: 765px;
+    }
+
+    .text_football .title_football {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .section_games .text_football .text_title_football {
+        font-weight: 300;
+        font-size: 12px;
+        max-width: 350px;
+    }
+
+    .img_tennis {
+        padding: 0;
+        top: 1180px;
+        margin: 0 auto;
+        width: 320px;
+        height: 320px;
+    }
+
+    .section_games .tennis .text_tennis {
+        top: 1460px;
+        left: 40px;
+    }
+
+    .text_tennis .title_tennis {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .section_games .text_tennis .text_title_tennis {
+        font-weight: 300;
+        font-size: 12px;
+        max-width: 350px;
+    }
+
+    .section_games .basket .text_basket {
+        top: 1900px;
+        left: 40px;
+    }
+
+    .img_basket {
+        top: 1600px;
+        margin: 0 0 0 20px;
+        width: 310px;
+        height: 310px;
+    }
+
+    .text_basket .title_basket {
+        font-size: 20px;
+        font-weight: 700;
+        max-width: 250px;
+    }
+
+    .section_games .text_basket .text_title_basket {
+        max-width: 350px;
+        font-size: 13px;
+        font-weight: 300;
+    }
+
+    .section_games {
+        height: 1550px;
+    }
+
+    .sports {
+        padding: 70px 10px;
+    }
+
+    .sports .title {
+        font-size: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width:430px) {
+    .img_basket {
+        margin: 0;
+
+    }
+}
+
+@media (max-width: 394px) {
+    .main {
+        padding: 100px 20px;
+    }
+
+    .main .title-h2 {
+        font-size: 35px;
+        margin-top: 65px;
+    }
+
+    .main div h2 .h2 {
+        font-size: 35px;
+        -webkit-text-stroke: 1.5px #57b55a;
+    }
+
+    .main div h3 {
+        font-size: 13px;
+        max-width: 300px;
+    }
+
+    .join_tiki_taka .join {
+        font-size: 17px;
+    }
+
+    .join_tiki_taka .join span {
+        -webkit-text-stroke: 1px #57b55a;
+    }
+
+    .join_tiki_taka .text {
+        font-size: 10px;
+        margin-top: 10px;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .section_games .football .text_football {
+        top: 1000px;
+        z-index: 1;
+        left: 20px;
+    }
+
+    .img_football {
+        max-width: 230px;
+        max-height: 230px;
+        margin: 0 auto;
+        top: 770px;
+    }
+
+    .text_football .title_football {
+        font-size: 17px;
+        font-weight: 650;
+    }
+
+    .text_football .title_football span {
+        -webkit-text-stroke: 1px #57b55a;
+    }
+
+    .section_games .text_football .text_title_football {
+        font-weight: 300;
+        font-size: 10px;
+        max-width: 300px;
+    }
+
+    .img_tennis {
+        padding: 0;
+        top: 1100px;
+        margin: 0 auto;
+        width: 270px;
+        height: 270px;
+    }
+
+    .section_games .tennis .text_tennis {
+        top: 1360px;
+        left: 20px;
+    }
+
+    .text_tennis .title_tennis {
+        font-size: 17px;
+        font-weight: 650;
+    }
+
+    .text_tennis .title_tennis span {
+        -webkit-text-stroke: 1px #57b55a;
+    }
+
+    .section_games .text_tennis .text_title_tennis {
+        font-weight: 300;
+        font-size: 10px;
+        max-width: 300px;
+    }
+
+    .section_games .basket .text_basket {
+        top: 1700px;
+        left: 20px;
+    }
+
+    .img_basket {
+        top: 1460px;
+        margin: 0 auto;
+        width: 260px;
+        height: 260px;
+    }
+
+    .text_basket .title_basket {
+        font-size: 17px;
+        font-weight: 650;
+        max-width: 190px;
+    }
+
+    .text_basket .title_basket span {
+        -webkit-text-stroke: 1px #57b55a;
+    }
+
+    .section_games .text_basket .text_title_basket {
+        max-width: 300px;
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    .section_games {
+        height: 1260px;
+    }
+
+    .sports {
+        padding: 50px 10px;
+    }
+
+    .sports .title {
+        font-size: 28px;
+        margin-bottom: 7px;
+        padding-bottom: 7px;
+    }
+
+    .card {
+        max-width: 260px;
+    }
+
+    .sport_category {
+        font-size: 11px;
+    }
+
+    .info .sport_title {
+        font-size: 15px;
+    }
+
+    .sport_title span {
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 319px) {
+    .main {
+        padding: 100px 20px;
+    }
+
+    .main .title-h2 {
+        font-size: 28px;
+        margin-top: 75px;
+    }
+
+    .main div h2 .h2 {
+        font-size: 30px;
+        -webkit-text-stroke: 1.5px #57b55a;
+    }
+
+    .main div h3 {
+        font-size: 10px;
+        max-width: 250px;
+    }
+
+    .join_tiki_taka .join {
+        font-size: 14px;
+    }
+
+    .join_tiki_taka .text {
+        font-size: 8px;
+        margin-top: 6px;
+        font-weight: 200;
+        max-width: 270px;
+        text-align: center;
+        padding:  0 5px;
+    }
+
+    .section_games .football .text_football {
+        top: 960px;
+        z-index: 1;
+        left: 15px;
+    }
+
+    .img_football {
+        max-width: 200px;
+        max-height: 200px;
+        margin: 0 auto;
+        top: 760px;
+    }
+
+    .text_football .title_football {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .section_games .text_football .text_title_football {
+        font-weight: 200;
+        font-size: 9px;
+        max-width: 250px;
+    }
+
+    .img_tennis {
+        padding: 0;
+        top: 1060px;
+        margin: 0 auto;
+        width: 220px;
+        height: 220px;
+    }
+
+    .section_games .tennis .text_tennis {
+        top: 1260px;
+        left: 15px;
+    }
+
+    .text_tennis .title_tennis {
+        font-size: 14px;
+        font-weight: 600;
+        max-width: 130px;
+    }
+
+    .section_games .text_tennis .text_title_tennis {
+        font-weight: 200;
+        font-size: 9px;
+        max-width: 250px;
+    }
+
+    .section_games .basket .text_basket {
+        top: 1580px;
+        left: 15px;
+    }
+
+    .img_basket {
+        top: 1380px;
+        margin: 0 auto;
+        width: 210px;
+        height: 210px;
+    }
+
+    .text_basket .title_basket {
+        font-size: 14px;
+        font-weight: 600;
+        max-width: 190px;
+    }
+
+    .section_games .text_basket .text_title_basket {
+        max-width: 250px;
+        font-size: 9px;
+        font-weight: 200;
+    }
+
+    .section_games {
+        height: 1160px;
+    }
+
+    .sports {
+        padding: 50px 10px;
+        border: none;
+    }
+
+    .sports .title {
+        font-size: 25px;
+        margin-bottom: 7px;
+        padding-bottom: 7px;
+    }
+
+    .card {
+        max-width: 260px;
+    }
+
+    .sport_category {
+        font-size: 9px;
+    }
+
+    .info .sport_title {
+        font-size: 12px;
+    }
+
+}
+
+/* ---------- End Main Media Query --------- */
+
+/* ============ Start Footer Media Query ============ */
+
+@media(min-width:1140px) and (max-width:1200px) {
+    .part_2_pages {
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:1140px) {
+    .content_footer {
+        padding: 28px;
+    }
+
+    .photo_of_logo {
+        width: 50px;
+        height: 47px;
+    }
+
+    .title_of_logo {
+        font-size: 40px;
+        font-weight: 850;
+        letter-spacing: 1.3px;
+    }
+
+    .social_media_icon {
+        margin-left: 20px;
+    }
+
+    .social_media_icon p {
+        font-size: 25px;
+        font-weight: 650;
+    }
+
+    .social_media_icon .icons a {
+        font-size: 25px;
+        margin-right: 13px;
+    }
+
+    .social_media_icon .icons a:hover {
+        transform: scale(1.2);
+    }
+
+    .all_pages p {
+        font-size: 25px;
+        font-weight: 650;
+        margin-top: 25px;
+        letter-spacing: 1.3;
+    }
+
+    .all_pages p span {
+        margin-left: 10px;
+    }
+
+    .all_pages .pages a {
+        font-size: 15px;
+    }
+
+    .contact-form {
+        max-width: 300px;
+        margin-top: 25px;
+        margin-right: 8px;
+
+    }
+
+    .contact-form h2 {
+        font-size: 25px;
+        font-weight: 650;
+        margin-bottom: 25px;
+    }
+
+    .contact-form .send-btn {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 580;
+
+    }
+}
+
+@media(max-width:898px) {
+    .content_footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content_footer {
+        padding: 30px;
+    }
+
+    .photo_of_logo {
+        width: 60px;
+        height: 57px;
+    }
+
+    .title_of_logo {
+        font-size: 50px;
+        font-weight: 900;
+        letter-spacing: 1.4px;
+    }
+
+    .footer_logo {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .social_media_icon p {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        align-items: center;
+    }
+
+    .social_media_icon .icons {
+        text-align: center;
+        align-items: center;
+    }
+
+    .social_media_icon .icons a {
+        font-size: 30px;
+        margin-right: 0;
+    }
+
+    .social_media_icon .icons a:hover {
+        transform: scale(1.25);
+    }
+
+    .all_pages p {
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: 25px;
+        letter-spacing: 1.5;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pages {
+        margin-right: 0px;
+    }
+
+    .all_pages p span {
+        margin-left: 15px;
+    }
+
+    .all_pages .pages a {
+        font-size: 18px;
+    }
+
+    .contact-form {
+        max-width: 600px;
+        margin-top: 25px;
+        margin-right: 8px;
+    }
+
+    .contact-form h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .contact-form .send-btn {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: 620;
+    }
+
+    .copy_right p {
+        font-size: 14px;
+    }
+
+
+}
+
+@media(max-width:452px) {
+
+    .content_footer {
+        padding: 15px;
+    }
+
+    .photo_of_logo {
+        width: 55px;
+        height: 50px;
+    }
+
+    .title_of_logo {
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+    }
+
+    .social_media_icon p {
+        font-size: 25px;
+        font-weight: 650;
+    }
+
+    .social_media_icon .icons a {
+        font-size: 25px;
+    }
+
+    .social_media_icon .icons a:hover {
+        transform: scale(1.2);
+    }
+
+    .all_pages p {
+        font-size: 25px;
+        font-weight: 650;
+        margin-top: 25px;
+        letter-spacing: 1.3;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pages {
+        margin-right: 0px;
+    }
+
+    .all_pages p span {
+        margin-left: 10px;
+    }
+
+    .all_pages .pages a {
+        font-size: 15px;
+    }
+
+    .contact-form .text-box {
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .contact-form .main-input {
+        font-size: 12px;
+    }
+
+    .contact-form {
+        max-width: 300px;
+        margin-top: 25px;
+        margin-right: 8px;
+    }
+
+    .contact-form h2 {
+        font-size: 25px;
+        font-weight: 650;
+        margin-bottom: 8px;
+    }
+
+    .contact-form .send-btn {
+        width: 90px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .copy_right p {
+        font-size: 11px;
+    }
+
+    .angel_up {
+        font-size: 24px;
+        border-radius: 8px;
+        padding: 0 5px;
+
+    }
+
+}
+
+@media(max-width:321px) {
+
+    .content_footer {
+        padding: 10px;
+    }
+
+    .photo_of_logo {
+        width: 50px;
+        height: 45px;
+    }
+
+    .title_of_logo {
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+    }
+
+    .social_media_icon p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .social_media_icon .icons a {
+        font-size: 22px;
+    }
+
+    .social_media_icon .icons {
+        margin-top: 10px;
+    }
+
+    .social_media_icon .icons a:hover {
+        transform: scale(1.1);
+    }
+
+    .all_pages p {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 20px;
+        letter-spacing: 1.2;
+    }
+
+    .all_pages p span {
+        margin-left: 7px;
+    }
+
+    .all_pages .pages a {
+        font-size: 13px;
+    }
+
+    .contact-form {
+        max-width: 200px;
+
+    }
+
+    .contact-form h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .contact-form .text-box {
+        height: 30px;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .contact-form .main-input {
+        font-size: 11px;
+    }
+
+    .contact-form .send-btn {
+        width: 70px;
+        height: 25px;
+        font-size: 13px;
+        font-weight: 550;
+    }
+
+    .copy_right p {
+        font-size: 10px;
+    }
+
+}
+
+/* --------------- End Footer Media Query -------------- */
